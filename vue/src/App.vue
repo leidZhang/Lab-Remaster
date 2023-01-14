@@ -2,7 +2,7 @@
   <div id="app">
     <!-- Header -->
     <div style="text-align: center; margin-bottom: 2px; background-color: white;">
-      <span style="font-size: 45px; font-weight: bold">Lab Remake</span>
+      <span style="font-size: 45px; font-weight: bold">Lab Remaster</span>
     </div>
     <!-- Nav menu -->
     <div>
