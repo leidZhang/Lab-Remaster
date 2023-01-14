@@ -24,7 +24,7 @@
       <div id="message" style="margin-top: 5px">
         <div style="margin-bottom: 10px;">{{ payMessage }}</div>
         <div style="margin-bottom: 10px;">{{ titleMessage }}</div>
-        <div v-html="detailMessage"></div>
+        <div v-html="detailMessage" style="white-space: pre-wrap"></div>
       </div>
     </div>
   </div>

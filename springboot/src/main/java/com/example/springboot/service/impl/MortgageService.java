@@ -19,18 +19,20 @@ public class MortgageService implements IMortgageService {
     @Override
     public Object balancePerYear(String principal, String amortization, String interest) {
         int balance;
-        String optStr = "";
+        String optStr = "\n" + String.format("%16s", "n") + String.format("%16s", "Balance") + "\n";
 
         Mortgage mortgage = getMortgage(principal, amortization, interest);
-        optStr += "n " + "Balance ";
         // balance table
         for(int i=0; i<=20; i++) {
             if (i <= 5 || (i <= 20 && i%5 == 0)) {
                 balance = (int)outstandingAfter(i, mortgage);
-                optStr += i + " " + balance + " ";
+                optStr += "\n" + String.format("%16d", i) + String.format("%,16d", balance) + "\n";
+                if (balance == 0) {
+                    break;
+                }
             }
         }
-        return optStr.substring(0, optStr.lastIndexOf(" "));
+        return optStr;
     }
 
     private Mortgage getMortgage(String principal, String amortization, String interest) {
